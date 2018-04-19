@@ -17,7 +17,7 @@ public class HelloController {
 	
 	
 	@RequestMapping(value = "/hello", produces=MediaType.TEXT_PLAIN_VALUE)
-    public String hello(@RequestParam(value="name", required=true) String name) throws IOException, Exception {
+    public String hello(@RequestParam(value="name", defaultValue="world") String name) throws IOException, Exception {
 		
 		return "Hello "+name;
 		      
